@@ -1,1 +1,3 @@
+This is the solution I used to run the virtual enviroment on windows 10 terminal. -Yes, I made this using windows. And yes, I am going to use
+linux (I have an Ubuntu VM).
 Set-ExecutionPolicy Unrestricted -Scope Process
