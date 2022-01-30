@@ -7,7 +7,8 @@ from discord.ext import commands
 # load token
 load_dotenv('D:\code\discordBots\wiabu\.env')
 TOKEN = os.environ.get('wiabuKey')
-
+if not TOKEN:
+    TOKEN = os.getenv("KEY")
 
 # get env var for bot key
 def quoteGenerator():
