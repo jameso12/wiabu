@@ -25,8 +25,8 @@ bot = discord.ext.commands.Bot(command_prefix='!')
 @bot.command(name="quote")
 async def animeQuote(ctx):
         await ctx.send(quoteGenerator())
-
-bot.run(TOKEN)
+if __name__ == "__main__":
+    bot.run(TOKEN)
 
 # random.randrange(1,10)
 # time snippet
