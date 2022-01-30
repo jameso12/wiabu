@@ -8,7 +8,7 @@ from discord.ext import commands
 load_dotenv('D:\code\discordBots\wiabu\.env')
 TOKEN = os.environ.get('wiabuKey')
 if not TOKEN:
-    TOKEN = os.getenv("KEY")
+    TOKEN = os.getenv("KEY") # my key name in heroku
 
 # get env var for bot key
 def quoteGenerator():
