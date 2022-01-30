@@ -2,6 +2,7 @@ from http import client
 from pydoc import cli
 import requests, json,discord, os, time, random
 from dotenv import load_dotenv
+from discord.ext import commands
 
 # load token
 load_dotenv('D:\code\discordBots\wiabu\.env')
@@ -17,13 +18,14 @@ def quoteGenerator():
     
     return f'"{qoute}" \n-{character}\n{anime}'
 
-client = discord.Client()
+bot = discord.ext.commands.Bot(command_prefix='!')
+# tow ways of making a bot: discord.Cient or discord.ext.commands.Bot(command_prefix='!')
 
-@client.event
-async def on_message(message):
-    await message.channel.send(quoteGenerator())
+@bot.command(name="quote")
+async def animeQuote(ctx):
+        await ctx.send(quoteGenerator())
 
-client.run(TOKEN)
+bot.run(TOKEN)
 
 # random.randrange(1,10)
 # time snippet
