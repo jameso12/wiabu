@@ -1,3 +1,3 @@
 # Wiabu Bot
 
-This bot will use an API to send random anime quotes
+This bot will use an [API](https://animechan.vercel.app/guide) to send random anime quotes
