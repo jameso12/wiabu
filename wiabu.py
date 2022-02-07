@@ -16,6 +16,7 @@ def quoteGenerator():
     """ Gets a random qoute from the API and returns a formted f-string that cointains the quote and its details. """
     try:
         r = requests.get("https://animechan.vercel.app/api/random") # Get squote, which is on json format
+        r.raise_for_status() # For exception handling 
         requestDictionary = json.loads(r.text) # Convert to python dictionary(now we can easily use it on our code).
         # Bellow the assigned the values the variables to keep the code clean. 
         anime, character, quote = requestDictionary["anime"],requestDictionary["character"],requestDictionary["quote"]
