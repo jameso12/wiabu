@@ -22,8 +22,8 @@ def quoteGenerator():
         anime, character, quote = requestDictionary["anime"],requestDictionary["character"],requestDictionary["quote"]
         rString = f'"{quote}" \n-{character}\n{anime}'
     except HTTPError as err:
-        rString = err
-    return "Something went wrong!\nData for nerds:\n"+rString
+        rString = "Something went wrong!\nData for nerds:\n" + err
+    return rString
 
 bot = discord.ext.commands.Bot(command_prefix='!')
 # tow ways of making a bot: discord.Cient or discord.ext.commands.Bot(command_prefix='!')
